@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Common:</strong>
+  <%= @animal.common %>
+</p>
+
+<p>
+  <strong>Latin:</strong>
+  <%= @animal.latin %>
+</p>
+
+<p>
+  <strong>Kingdom:</strong>
+  <%= @animal.kingdom %>
+</p>
+
+<p>
+  <strong>Sightings:</strong>
+</p>
+<p>
+  <ul>
+    <%= render partial: "sighting", collection: @animal.sightings %>
+  </ul>
+</p>
+
+<%= link_to 'Edit Animal', edit_animal_path(@animal) %> |
+<%= link_to 'Edit Sighting', edit_sighting_path %> |
+<%= link_to 'Back', animals_path %>
