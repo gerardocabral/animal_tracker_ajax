@@ -2,7 +2,7 @@
 
 <h1>Listing Animals</h1>
 <br>
-<table>
+<table  id="animal_list">
   <thead>
     <tr>
       <th>Common</th>
@@ -27,6 +27,30 @@
 </table>
 
 <br>
+<p>
+  <!-- Input area for new wine -->
+  <div class="field">
+    <label for="animal_common">Common</label><br>
+    <input type="text" name="animal[common]" id="animal_common" />
+  </div>
+  <div class="field">
+    <label for="animal_latin">Latin</label><br>
+    <input type="text" name="animal[latin]" id="animal_latin" />
+  </div>
+  <div class="field">
+    <label for="animal_kingdom">Kingdom</label><br>
+    <select id="animal_kingdom" name="animal[kingdom]">
+      <option value="bird">bird</option>
+      <option value="reptile">reptile</option>
+      <option value="amphibian">amphibian</option>
+      <option value="fish">fish</option>
+      <option value="mammal" selected="selected">mammal</option>
+    </select>
+  </div>
+  <br>
+  <button id="add_new_animal_button">Add New Animal
+  </button>
+</p>
 <br>
 
 <%= link_to 'New Animal', new_animal_path %> |
